@@ -2,52 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Tools Weekly</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
 
-  <!-- Header -->
-  <header class="max-w-3xl mx-auto py-12 text-center">
-    <h1 class="text-3xl sm:text-4xl font-bold">
-      Your Weekly Shortcut to the Smartest AI Tools
-    </h1>
-    <p class="mt-4 text-lg text-gray-600">
-      Compare, explore, and save time with curated AI picks – updated weekly.
-    </p>
+  <!-- Responsive Navigation -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold">AI Tools Weekly</a>
+      <button id="menu-btn" class="sm:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div id="menu" class="hidden sm:flex sm:items-center space-x-4">
+        <a href="#discover-tools" class="text-gray-700 hover:text-indigo-500">Discover Tools</a>
+        <a href="#subscribe" class="text-gray-700 hover:text-indigo-500">Join Newsletter</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="menu-mobile" class="hidden sm:hidden bg-white px-4 pb-4">
+      <a href="#discover-tools" class="block py-2 border-b border-gray-200 text-gray-700 hover:text-indigo-500">Discover Tools</a>
+      <a href="#subscribe" class="block py-2 text-gray-700 hover:text-indigo-500">Join Newsletter</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-20 max-w-3xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-4xl font-bold">Your Weekly Shortcut to the Smartest AI Tools</h1>
+    <p class="mt-4 text-lg text-gray-600">Compare, explore, and save time with curated AI picks – updated weekly.</p>
     <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#"
-         class="bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">
-        Discover Tools
-      </a>
-      <a href="#"
-         class="border border-indigo-500 text-indigo-500 font-medium py-2 px-4 rounded-lg">
-        Join Newsletter
-      </a>
+      <a href="#discover-tools" class="bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">Discover Tools</a>
+      <a href="#subscribe" class="border border-indigo-500 text-indigo-500 font-medium py-2 px-4 rounded-lg">Join Newsletter</a>
     </div>
   </header>
 
-  <main class="max-w-3xl mx-auto space-y-16">
+  <main id="discover-tools" class="max-w-3xl mx-auto space-y-16 mt-8 px-4">
 
     <!-- Weekly Pick -->
-    <section class="bg-white/50 bg-gradient-to-br from-white to-indigo-50 border border-indigo-100 rounded-xl p-6
-                    flex flex-col md:flex-row items-center justify-between">
+    <section class="bg-gradient-to-br from-white to-indigo-50 border border-indigo-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between">
       <div class="flex items-center gap-4">
-        <img src="https://cdn.simpleicons.org/midjourney" alt="Midjourney"
-             class="h-12 w-12 text-indigo-600 bg-indigo-100 p-2 rounded-full" />
+        <img src="https://cdn.simpleicons.org/midjourney" alt="Midjourney" class="h-12 w-12 text-indigo-600 bg-indigo-100 p-2 rounded-full" />
         <div>
           <p class="text-xs uppercase text-gray-500">Weekly Pick</p>
           <h2 class="text-2xl font-semibold mt-1">Midjourney</h2>
-          <p class="mt-2 text-gray-600">
-            A powerful AI tool for generating stunning, high‑quality images from text prompts
-          </p>
+          <p class="mt-2 text-gray-600">A powerful AI tool for generating stunning, high‑quality images from text prompts</p>
         </div>
       </div>
-      <a href="#"
-         class="mt-4 md:mt-0 bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">
-        Try Now →
-      </a>
+      <a href="https://www.midjourney.com/" target="_blank" class="mt-4 md:mt-0 bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">Try Now →</a>
     </section>
 
     <!-- Explore Tools -->
@@ -56,60 +60,50 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- ChatGPT -->
         <div class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition">
-          <img src="https://cdn.simpleicons.org/openai" alt="ChatGPT"
-               class="mx-auto h-12 w-12" />
+          <img src="https://cdn.simpleicons.org/openai" alt="ChatGPT" class="mx-auto h-12 w-12" />
           <h4 class="mt-4 font-semibold">ChatGPT</h4>
-          <p class="mt-2 text-gray-600 text-sm">
-            Advanced chatbot for engaging, human‑like text conversations
-          </p>
+          <a href="https://chat.openai.com/" target="_blank" class="text-indigo-500 underline">Launch →</a>
         </div>
         <!-- Jasper -->
         <div class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition">
-          <img src="https://cdn.simpleicons.org/jasper" alt="Jasper"
-               class="mx-auto h-12 w-12" />
+          <img src="https://cdn.simpleicons.org/jasper" alt="Jasper" class="mx-auto h-12 w-12" />
           <h4 class="mt-4 font-semibold">Jasper</h4>
-          <p class="mt-2 text-gray-600 text-sm">
-            AI writing assistant for blogs, articles, and marketing copy
-          </p>
+          <a href="https://www.jasper.ai/" target="_blank" class="text-indigo-500 underline">Launch →</a>
         </div>
-        <!-- DALL‑E 2 -->
+        <!-- DALL‑E 2 -->
         <div class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition">
-          <img src="https://cdn.simpleicons.org/dalle" alt="DALL‑E 2"
-               class="mx-auto h-12 w-12" />
+          <img src="https://cdn.simpleicons.org/dalle" alt="DALL‑E 2" class="mx-auto h-12 w-12" />
           <h4 class="mt-4 font-semibold">DALL‑E 2</h4>
-          <p class="mt-2 text-gray-600 text-sm">
-            Create realistic images from simple text descriptions
-          </p>
+          <a href="https://labs.openai.com/" target="_blank" class="text-indigo-500 underline">Launch →</a>
         </div>
         <!-- Synthesia -->
         <div class="bg-white border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition">
-          <img src="https://cdn.simpleicons.org/synthesia" alt="Synthesia"
-               class="mx-auto h-12 w-12" />
-          <div class="flex justify-center gap-1 mt-2 text-xs font-semibold text-gray-500">
-            <span>Video</span><span>Text</span>
-          </div>
+          <img src="https://cdn.simpleicons.org/synthesia" alt="Synthesia" class="mx-auto h-12 w-12" />
           <h4 class="mt-2 font-semibold">Synthesia</h4>
-          <p class="mt-2 text-gray-600 text-sm">
-            Generate professional videos with an AI avatar
-          </p>
+          <a href="https://www.synthesia.io/" target="_blank" class="text-indigo-500 underline">Launch →</a>
         </div>
       </div>
     </section>
 
     <!-- Subscribe -->
-    <section class="bg-white border border-gray-200 rounded-lg p-8 text-center">
+    <section id="subscribe" class="bg-white border border-gray-200 rounded-lg p-8 text-center">
       <h4 class="text-lg font-semibold">Subscribe for AI updates</h4>
       <form class="mt-4 flex flex-col sm:flex-row justify-center gap-2">
-        <input type="email" placeholder="Enter your email"
-               class="w-full sm:w-auto border border-gray-300 rounded-lg px-4 py-2
-                      focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-        <button type="submit"
-                class="bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">
-          Subscribe
-        </button>
+        <input type="email" placeholder="Enter your email" class="w-full sm:w-auto border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+        <button type="submit" class="bg-gradient-to-r from-indigo-500 to-blue-400 text-white font-medium py-2 px-4 rounded-lg">Subscribe</button>
       </form>
     </section>
 
   </main>
+
+  <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('menu-mobile');
+    btn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 </html>
