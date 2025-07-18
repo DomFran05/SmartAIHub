@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Tools Weekly</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>html{scroll-behavior:smooth;} /* Smooth anchor scrolling */</style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
 
   <!-- Responsive Navigation -->
-  <nav class="bg-white shadow-md fixed w-full z-10">
+  <nav class="bg-white shadow-md fixed w-full z-20">
     <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/" class="text-xl font-bold">AI Tools Weekly</a>
       <button id="menu-btn" class="sm:hidden focus:outline-none">
@@ -17,20 +18,22 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-      <div id="menu" class="hidden sm:flex sm:items-center space-x-4">
+      <div class="hidden sm:flex sm:items-center space-x-6" id="menu-desktop">
         <a href="#discover-tools" class="text-gray-700 hover:text-indigo-500">Discover Tools</a>
         <a href="#subscribe" class="text-gray-700 hover:text-indigo-500">Join Newsletter</a>
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="menu-mobile" class="hidden sm:hidden bg-white px-4 pb-4">
-      <a href="#discover-tools" class="block py-2 border-b border-gray-200 text-gray-700 hover:text-indigo-500">Discover Tools</a>
-      <a href="#subscribe" class="block py-2 text-gray-700 hover:text-indigo-500">Join Newsletter</a>
+    <div id="menu-mobile" class="hidden bg-white border-t border-gray-200">
+      <div class="px-4 pb-4 space-y-2">
+        <a href="#discover-tools" class="block py-2 text-gray-700 hover:text-indigo-500">Discover Tools</a>
+        <a href="#subscribe" class="block py-2 text-gray-700 hover:text-indigo-500">Join Newsletter</a>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="pt-20 max-w-3xl mx-auto text-center">
+  <header class="pt-24 pb-12 max-w-3xl mx-auto text-center px-4">
     <h1 class="text-3xl sm:text-4xl font-bold">Your Weekly Shortcut to the Smartest AI Tools</h1>
     <p class="mt-4 text-lg text-gray-600">Compare, explore, and save time with curated AI picks – updated weekly.</p>
     <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
@@ -39,7 +42,7 @@
     </div>
   </header>
 
-  <main id="discover-tools" class="max-w-3xl mx-auto space-y-16 mt-8 px-4">
+  <main id="discover-tools" class="max-w-3xl mx-auto space-y-16 px-4">
 
     <!-- Weekly Pick -->
     <section class="bg-gradient-to-br from-white to-indigo-50 border border-indigo-100 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between">
@@ -97,11 +100,12 @@
   </main>
 
   <script>
-    // Mobile menu toggle
-    const btn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('menu-mobile');
-    btn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('menu-mobile');
+      btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
     });
   </script>
 
